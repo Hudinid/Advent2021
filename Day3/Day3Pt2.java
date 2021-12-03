@@ -1,3 +1,4 @@
+package Day3;
 import java.util.*;
 import java.io.*;
 public class Day3Pt2 {

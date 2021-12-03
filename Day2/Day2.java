@@ -1,3 +1,4 @@
+package Day2;
 import java.io.*;
 import java.util.*;
 public class Day2 {
