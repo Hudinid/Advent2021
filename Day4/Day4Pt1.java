@@ -45,7 +45,7 @@ public class Day4Pt1 {
             int number = order[count];
             boards = doBoard(number, boards);
             
-            checkBingo(boards);
+            if(checkBingo(boards)) haha = true;
             count ++;
             System.out.println("Number: " + number);
         }
