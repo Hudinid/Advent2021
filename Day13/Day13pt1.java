@@ -7,21 +7,14 @@ public class Day13pt1 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(new FileWriter("output.txt"));
         //799
-        for(int i = 0; i < 799; i ++) {
+        for(int i = 0; i < 18; i ++) {
             String line = br.readLine();
             String[] tokens = line.split(",");
             grid[Integer.parseInt(tokens[0])][Integer.parseInt(tokens[1])] = true;
         }
         System.out.println(checkTrue());
         reflectVertical(655);
-        reflectHorizontal(447);
-        reflectVertical(327);
-        reflectHorizontal(223);
-        reflectVertical(163);
-        reflectHorizontal(111);
-        reflectVertical(81);
-        reflectHorizontal(55);
-        reflectVertical(40);
+        System.out.println(checkTrue());
     }
     
     public static void reflectVertical(int number) {
@@ -43,7 +36,7 @@ public class Day13pt1 {
                 int difference = Math.abs(number-j);
                 if(grid[j][i]) {
                     grid[j][i] = false;
-                    grid[number - difference][i] = true;
+                    grid[i][number - difference] = true;
                 }
             }
         }
